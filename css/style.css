@@ -140,6 +140,9 @@ ul {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact .link:hover,
 .contact .link:active {
@@ -148,6 +151,9 @@ ul {
 .icon {
   margin-right: 10px;
   fill: var(--secondary-text-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover .icon,
 .link:active .icon {
@@ -211,6 +217,9 @@ h1.hero-title {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover,
@@ -292,15 +301,7 @@ ul.photo-duty {
 img {
   display: block;
 }
-.list {
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: rgba(47, 48, 58, 0.8);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+
 .list {
   display: block;
   margin-right: 30px;
@@ -389,13 +390,16 @@ h2.team-name {
   justify-content: center;
   border-radius: 50%;
   color: var(--fond-color);
-  /*transition-property: background-color;
+  transition-property: background-color, transform;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-network .net {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-network:hover,
@@ -445,6 +449,9 @@ h2.team-name {
   border-radius: 4px;
 }
 .company .company-svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #afb1b8;
 }
 .company:hover .company-svg,
@@ -530,6 +537,9 @@ address {
   height: 100%;
   align-items: center;
   justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-icon-net:hover,
 .foot-icon-net:focus {
@@ -631,6 +641,9 @@ address {
   line-height: 1.6;
   font-weight: 500;
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .key:hover,
 .key:active {
