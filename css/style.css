@@ -89,6 +89,14 @@ ul {
   line-height: 1.2;
   font-weight: 500;
 }
+/*.link-active::after {
+  content: "";
+  display: block;
+  background: #2196f3;
+  border-radius: 2px;
+  height: 4px;
+}*/
+
 .site-nav .navy {
   margin-right: 50px;
 }
@@ -279,6 +287,15 @@ ul.photo-duty {
 }
 img {
   display: block;
+}
+.list {
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: rgba(47, 48, 58, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .list {
   display: block;
@@ -528,8 +545,9 @@ address {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
-.backdrop .is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -541,6 +559,23 @@ address {
   height: 581px;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
+}
+.modal-btn {
+  display: flex;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+.icon-close {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
 /* страница Портфолио */
