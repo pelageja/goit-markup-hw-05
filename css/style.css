@@ -90,11 +90,14 @@ ul {
   line-height: 1.2;
   font-weight: 500;
   position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-active::after {
   content: "";
   position: absolute;
-  bottom: -1.5px;
+  bottom: -2px;
   left: 0;
   background: #2196f3;
   border-radius: 2px;
@@ -115,6 +118,9 @@ ul {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:active {
@@ -330,10 +336,10 @@ h2.photo-report {
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 .blackout-tittle {
-  margin-top: 27px;
-  margin-bottom: 27px;
   text-align: center;
   font-weight: 700;
   font-size: 14px;
@@ -467,13 +473,20 @@ h2.team-name {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 100%;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.company .company-svg {
+.logobox:hover .company,
+.logobox:focus .company {
+  border-color: var(--accent-color);
+}
+
+.company-svg {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -714,7 +727,7 @@ address {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 24px 63px;
+  padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition-property: transform, box-shadow;
@@ -722,6 +735,7 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-active .overlay-text {
+  font: Roboto;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
