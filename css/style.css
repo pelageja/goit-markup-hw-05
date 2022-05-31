@@ -89,14 +89,18 @@ ul {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
+  position: relative;
 }
-/*.link-active::after {
+.link-active::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
   background: #2196f3;
   border-radius: 2px;
   height: 4px;
-}*/
+  width: 100%;
+}
 
 .site-nav .navy {
   margin-right: 50px;
@@ -305,6 +309,7 @@ img {
 .list {
   display: block;
   margin-right: 30px;
+  position: relative;
 }
 .list:nth-child(3) {
   margin-right: 0;
@@ -318,6 +323,26 @@ h2.photo-report {
   line-height: 1.2;
   color: var(--main-text-color);
 }
+.photo-duty-blackout {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.blackout-tittle {
+  margin-top: 27px;
+  margin-bottom: 27px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--fond-color);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 /*Наша команда*/
 .team {
   background-color: var(--fond-light-color);
@@ -390,7 +415,7 @@ h2.team-name {
   justify-content: center;
   border-radius: 50%;
   color: var(--fond-color);
-  transition-property: background-color, transform;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -557,13 +582,15 @@ address {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition-property: transform, opacity;
+  visibility: visible;
+  transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal {
   position: absolute;
@@ -578,23 +605,18 @@ address {
   border-radius: 4px;
 }
 .modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
-  background-color: #ffffff;
+  background-color: var(--fond-color);
   width: 30px;
   height: 30px;
-  padding: 0;
-  margin: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 8px;
-  transform: translate(490px);
-}
-.icon-close {
-  width: 18px;
-  height: 18px;
+
   cursor: pointer;
 }
 
@@ -665,6 +687,7 @@ address {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
 .link-gallery:nth-child(n + 7) {
   margin-bottom: 0;
 }
@@ -673,11 +696,42 @@ address {
 }
 .gallery-active {
   display: block;
+  position: relative;
+  overflow: hidden;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .gallery-active:hover,
 .gallery-active:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 24px 63px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-active .overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.gallery-active:hover .overlay-text,
+.gallery-active:focus .overlay-text {
+  transform: translateY(0);
 }
 .gallery h2 {
   margin: 0;
