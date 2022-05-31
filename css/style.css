@@ -340,7 +340,9 @@ h2.photo-report {
   padding-bottom: 27px;
 }
 .blackout-tittle {
-  text-align: center;
+
+text-align: center;
+  margin: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
